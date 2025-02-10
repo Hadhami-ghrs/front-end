@@ -1,10 +1,12 @@
-<div class="alert alert-success" role="alert">
-  <div class="alert-items">
-    <div class="alert-item static">
-      <div class="alert-icon-wrapper">
-        <!-- <cds-icon class="alert-icon" shape="success-standard"></cds-icon> -->
-      </div>
-      <span class="alert-text">This alert is in the middle of the page.</span>
+
+<div class="main-container">
+<app-header></app-header>
+  <div class="content-container">
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true">
+      <app-side-nav></app-side-nav>
+    </clr-vertical-nav>
+    <div class="content-area">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
