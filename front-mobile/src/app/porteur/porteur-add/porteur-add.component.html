@@ -1,0 +1,120 @@
+<form clrStepper [formGroup]="form" (ngSubmit)="submit()">
+
+    <!-- Étape 1 : Informations Personnelles -->
+    <clr-stepper-panel formGroupName="personal">
+      <clr-step-title>Personal Information</clr-step-title>
+      <clr-step-description>Enter personal details.</clr-step-description>
+      <clr-step-content *clrIfExpanded>
+  
+        <clr-input-container>
+          <label>First Name</label>
+          <input clrInput formControlName="firstName" required />
+          <clr-control-error *clrIfError="'required'">First Name is required</clr-control-error>
+        </clr-input-container>
+  
+        <clr-input-container>
+          <label>Last Name</label>
+          <input clrInput formControlName="lastName" required />
+          <clr-control-error *clrIfError="'required'">Last Name is required</clr-control-error>
+        </clr-input-container>
+  
+        <clr-input-container>
+          <label>Address</label>
+          <input clrInput formControlName="adresse" required />
+          <clr-control-error *clrIfError="'required'">Address is required</clr-control-error>
+        </clr-input-container>
+  
+        <button clrStepButton="next">Next</button>
+      </clr-step-content>
+    </clr-stepper-panel>
+  
+    <!-- Étape 2 : Données Médicales -->
+    <clr-stepper-panel formGroupName="medical">
+      <clr-step-title>Medical Information</clr-step-title>
+      <clr-step-description>Enter medical details.</clr-step-description>
+      <clr-step-content *clrIfExpanded>
+  
+        <clr-input-container>
+          <label>Medical Condition</label>
+          <input clrInput formControlName="maladie" />
+        </clr-input-container>
+  
+        <clr-input-container>
+          <label>Security Zone</label>
+          <input clrInput formControlName="zonesecurite" required />
+          <clr-control-error *clrIfError="'required'">Security Zone is required</clr-control-error>
+        </clr-input-container>
+  
+        <clr-input-container>
+          <label>Heart Rate Min</label>
+          <input clrInput formControlName="rythmeCardMin" type="number" required />
+          <clr-control-error *clrIfError="'required'">Required</clr-control-error>
+        </clr-input-container>
+  
+        <clr-input-container>
+          <label>Heart Rate Max</label>
+          <input clrInput formControlName="rythmeCardMax" type="number" required />
+          <clr-control-error *clrIfError="'required'">Required</clr-control-error>
+        </clr-input-container>
+  
+        <button clrStepButton="next">Next</button>
+      </clr-step-content>
+    </clr-stepper-panel>
+  
+    <!-- Étape 3 : Données Physiologiques -->
+    <clr-stepper-panel formGroupName="health">
+      <clr-step-title>Health Details</clr-step-title>
+      <clr-step-description>Enter physiological data.</clr-step-description>
+      <clr-step-content *clrIfExpanded>
+  
+        <clr-input-container>
+          <label>Temperature Min</label>
+          <input clrInput formControlName="températureMin" type="number" required />
+          <clr-control-error *clrIfError="'required'">Required</clr-control-error>
+        </clr-input-container>
+  
+        <clr-input-container>
+          <label>Temperature Max</label>
+          <input clrInput formControlName="températureMax" type="number" required />
+          <clr-control-error *clrIfError="'required'">Required</clr-control-error>
+        </clr-input-container>
+  
+        <clr-input-container>
+          <label>Blood Pressure Min</label>
+          <input clrInput formControlName="tensionMin" type="number" required />
+          <clr-control-error *clrIfError="'required'">Required</clr-control-error>
+        </clr-input-container>
+  
+        <clr-input-container>
+          <label>Blood Pressure Max</label>
+          <input clrInput formControlName="tensionMax" type="number" required />
+          <clr-control-error *clrIfError="'required'">Required</clr-control-error>
+        </clr-input-container>
+  
+        <button clrStepButton="next">Next</button>
+      </clr-step-content>
+    </clr-stepper-panel>
+  
+    <!-- Étape 4 : Informations du Compte -->
+    <clr-stepper-panel formGroupName="account">
+      <clr-step-title>Account Information</clr-step-title>
+      <clr-step-description>Setup account details.</clr-step-description>
+      <clr-step-content *clrIfExpanded>
+  
+        <clr-input-container>
+          <label>Password</label>
+          <input clrInput formControlName="password" type="password" required />
+          <clr-control-error *clrIfError="'required'">Password is required</clr-control-error>
+        </clr-input-container>
+  
+        <clr-checkbox-wrapper>
+          <input clrCheckbox formControlName="isActive" />
+          <label>Is Active</label>
+        </clr-checkbox-wrapper>
+  
+        <button clrStepButton="submit">Submit</button>
+      </clr-step-content>
+    </clr-stepper-panel>
+  
+  </form>
+  
