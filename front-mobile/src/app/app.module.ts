@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
 import { ClarityIcons, userIcon,boltIcon, cogIcon, homeIcon, certificateIcon } from '@cds/core/icon';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
@@ -11,15 +10,19 @@ ClarityIcons.addIcons(userIcon,boltIcon,cogIcon ,homeIcon,certificateIcon);
 
 import { ClarityModule } from '@clr/angular';
 import { CoreModule } from './core/core.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PorteurModule } from './porteur/porteur.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+
+    
   ],
   imports: [
-    BrowserModule,ClarityModule,CoreModule,
-    AppRoutingModule,BrowserAnimationsModule
+    BrowserModule,ClarityModule,CoreModule,HttpClientModule,
+    AppRoutingModule,BrowserAnimationsModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,10 +2,17 @@
   <cds-icon shape="user"clrVerticalNavIcon></cds-icon>
   
   Utilisateur
-  <clr-vertical-nav-group-children>
-  <a clrVerticalNavLink  routerLinkActive="active">
-      User
-  </a>
-  </clr-vertical-nav-group-children>
   
-  </clr-vertical-nav-group>
+  <clr-vertical-nav-group-children>
+    <a clrVerticalNavLink routerLink="/transporteur" routerLinkActive="active">
+       <cds-icon shape="accessibility-2" clrVerticalNavIcon></cds-icon>
+       porteur
+    </a>
+  </clr-vertical-nav-group-children>
+    <clr-vertical-nav-group-children>
+      <a clrVerticalNavLink routerLink="/transporteur" routerLinkActive="active">
+         <cds-icon shape="accessibility-2" clrVerticalNavIcon></cds-icon>
+         soignant
+      </a>
+    </clr-vertical-nav-group-children>
+</clr-vertical-nav-group>
