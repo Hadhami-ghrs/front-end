@@ -14,7 +14,7 @@ export class PorteurListComponent  {
 
   constructor( private porteurService: PorteurService) {}
 ngOnInit(): void {
-  this.porteurService.getAllPorteurs().subscribe(data=>{
+  this.porteurService.getAllPorteur().subscribe(data=>{
     this.porteur=data
     console.log('data',data)
     this.data=data[0]
