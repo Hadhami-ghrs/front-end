@@ -4,12 +4,25 @@ import { PorteurAddComponent } from './porteur-add/porteur-add.component';
 import { PorteurDeleteComponent } from './porteur-delete/porteur-delete.component';
 import { PorteurListComponent } from './porteur-list/porteur-list.component';
 import { PorteurUpdateComponent } from './porteur-update/porteur-update.component';
+import { AuthGuard } from '../auth/auth.guard';
+import { PorteurComponent } from './porteur.component';
 
 const routes: Routes = [
-  {path:"Add-porteur",component:PorteurAddComponent},
-  {path:"Delete-porteur",component:PorteurDeleteComponent},
-  {path:"List-porteur",component:PorteurListComponent},
-  {path:"Update-porteur",component:PorteurUpdateComponent},
+  {
+    path:"", component:PorteurComponent,canActivate: [AuthGuard]
+  },
+  {
+    path:"add-porteur", component:PorteurAddComponent,canActivate: [AuthGuard]
+  },
+  {
+    path:"update-porteur/:id", component:PorteurUpdateComponent,canActivate: [AuthGuard]
+  },
+  {
+    path:"delete-porteur", component:PorteurDeleteComponent,canActivate: [AuthGuard]
+  },
+  {
+    path:"detail-porteur", component:PorteurListComponent,canActivate: [AuthGuard]
+  },
 ];
 
 @NgModule({

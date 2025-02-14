@@ -12,17 +12,15 @@ import { ClarityModule } from '@clr/angular';
 import { CoreModule } from './core/core.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { PorteurModule } from './porteur/porteur.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-
-    
+    AppComponent, 
   ],
   imports: [
     BrowserModule,ClarityModule,CoreModule,HttpClientModule,
-    AppRoutingModule,BrowserAnimationsModule,FormsModule
+    AppRoutingModule,BrowserAnimationsModule,FormsModule,AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
